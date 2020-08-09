@@ -23,6 +23,11 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('profile-menu-component', require('./components/Layout/ProfileMenu.vue').default);
 Vue.component('task-index-component', require('./components/tasks/TaskIndex.vue').default);
 Vue.component('task-item-component', require('./components/tasks/TaskItem.vue').default);
+Vue.component('add-people-component', require('./components/people/AddPeople.vue').default);
+Vue.component('new-person-component', require('./components/people/NewPerson.vue').default);
+Vue.component('lead-index-component', require('./components/leads/LeadIndex.vue').default);
+Vue.component('lead-column-component', require('./components/leads/LeadColumn.vue').default);
+Vue.component('lead-card-component', require('./components/leads/LeadCard.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

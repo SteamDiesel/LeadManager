@@ -29,9 +29,18 @@ Route::get('/team', function(){
 Route::get('/settings', function(){
     return view('pages.settings');
 });
-Route::get('/leads', function(){
-    return view('pages.leads');
-});
+// Route::get('/leads', function(){
+//     return view('pages.leads');
+// });
+// Route::get('/lead', function(){
+//     return view('pages.lead');
+// });
+Route::get('/leads', 'LeadController@index');
+Route::get('/leads/create', 'LeadController@create');
+Route::post('/leads', 'LeadController@store');
+Route::get('/leads/{lead}/edit', 'LeadController@edit');
+Route::patch('/leads/{lead}', 'LeadController@update');
+
 Route::get('/tasks', function(){
     return view('pages.tasks');
 });
