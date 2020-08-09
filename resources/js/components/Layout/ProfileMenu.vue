@@ -7,6 +7,7 @@
 					id="user-menu"
 					aria-label="User menu"
 					aria-haspopup="true"
+					@click="show = !show"
 				>
 					<img
 						class="h-8 w-8 rounded-full"
@@ -26,6 +27,8 @@
                 To: "transform opacity-0 scale-95"
             -->
 			<div
+				v-show="show"
+					
 				class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
 			>
 				<div
@@ -34,24 +37,11 @@
 					aria-orientation="vertical"
 					aria-labelledby="user-menu"
 				>
-					<a
-						href="#"
-						class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150"
-						role="menuitem"
-						>Your Profile</a
-					>
-					<a
-						href="#"
-						class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150"
-						role="menuitem"
-						>Settings</a
-					>
-					<a
-						href="#"
-						class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150"
-						role="menuitem"
-						>Sign out</a
-					>
+					<slot name="profile"></slot>
+					<slot name="settings"></slot>
+					<slot name="signout"></slot>
+                                    
+
 				</div>
 			</div>
 		</div>
@@ -60,8 +50,11 @@
 
 <script>
 export default {
-	mounted() {
-		console.log("Component mounted.");
+	name: "ProfileMenu",
+	data(){
+		return {
+			show: false
+		}
 	}
 };
 </script>

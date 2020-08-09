@@ -2,7 +2,8 @@
 
 @section('content')
 <div>
-    This is the Content for Home page / Dashboard
+    This is the Content for Leads page
+    
 </div>
 
 @endsection

@@ -20,3 +20,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', function(){
+    return view('pages.profile');
+});
+Route::get('/team', function(){
+    return view('pages.team');
+});
+Route::get('/settings', function(){
+    return view('pages.settings');
+});
+Route::get('/leads', function(){
+    return view('pages.leads');
+});
+Route::get('/tasks', function(){
+    return view('pages.tasks');
+});
